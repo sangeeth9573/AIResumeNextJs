@@ -7,10 +7,10 @@ import {
     DialogHeader,
     DialogTitle,
 } from "@/components/ui/dialog"
-import { MouseEventHandler, useState } from "react";
+import React, { useState } from "react";
 import { Button } from "@/components/ui/button";
 import { Input } from "@/components/ui/input";
-export default function () {
+const AddResume :React.FC=()=> {
     const [openDailog,setOpenDailog]=useState(false);
     return (
         <div>
@@ -37,3 +37,4 @@ export default function () {
         </div>
     )
 }
+export default AddResume;
