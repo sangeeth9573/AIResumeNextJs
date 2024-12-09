@@ -6,10 +6,10 @@ import ExperincePreview from '../preview/ExperiencePreview';
 import EducationalPreview from '../preview/EducationalPreview';
 import SkillsPreview from '../preview/SkillsPreview';
 import { ResumeInfoContext } from '../context/ResumeInfoCntext';
-import { resumeInterface } from '@/interface/resumeInterface';
 
 function ResumePreview() {
-  const resume=useContext<resumeInterface|undefined>(ResumeInfoContext);
+  const context= useContext(ResumeInfoContext);
+  const resume= context?.resumeInfo;
   return (
     <div className='shadow-lg h-full p-14 border-t-[20px]'
     style={{
