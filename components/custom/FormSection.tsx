@@ -3,6 +3,7 @@ import PersonalDetails from '../form/PersonalDetails'
 import { Button } from '../ui/button'
 import { ArrowLeft, ArrowRight, LayoutGrid } from 'lucide-react'
 import ObjectDeatils from '../form/ObjectDeatils'
+import ExperienceDetails from '../form/ExperienceDetails'
 
 function FormSection() {
   const[activeIndex,setActiveIndex]=useState<number>(1)
@@ -19,6 +20,7 @@ function FormSection() {
       </div>
       {activeIndex ==1 ? <PersonalDetails /> : null}
       {activeIndex==2? <ObjectDeatils/> : null}
+      {activeIndex==3? <ExperienceDetails/> : null}
     </div>
   )
 }

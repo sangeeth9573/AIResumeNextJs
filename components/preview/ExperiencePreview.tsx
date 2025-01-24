@@ -18,7 +18,8 @@ const ExperiencePreview: React.FC<{ resumeInfo: resumeInterface|undefined }> = (
             {experience.state}.
             <span>{experience.startDate} {experience.currentlyWorking ? 'Present' : experience.endDate}</span>
           </h3>
-          <p className='text-xs my-2'>{experience.workSummery}</p>
+          {/* <p className='text-xs my-2'>{experience.workSummery}</p> */}
+          <div dangerouslySetInnerHTML={{__html:experience.workSummery}}/>
         </div>
       ))}
     </div>
